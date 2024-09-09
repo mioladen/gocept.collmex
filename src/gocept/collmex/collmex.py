@@ -326,6 +326,7 @@ class Collmex:
                 else data)
         data = 'LOGIN;{};{}\n'.format(self.username, self.password) + data
         log.debug(data.replace(self.password, '<PASSWORD>'))
+        print('###', data)
         content_type, body = gocept.collmex.utils.encode_multipart_formdata(
             [], [('fileName', 'api.csv', data)])
 
@@ -342,6 +343,7 @@ class Collmex:
         response = io.StringIO(response.read().decode(self.encoding))
 
         lines = list(csv.reader(response, dialect=CollmexDialect))
+        print('####', lines)
 
         response.close()
         result = lines.pop()
