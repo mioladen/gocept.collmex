@@ -4,7 +4,7 @@ Changes
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add ProductGroup (PRDGRP)
 
 
 2.1.0 (2024-05-31)

@@ -215,6 +215,11 @@ class Collmex:
             price_group,
             0, self.system_identifier)
 
+    def get_product_groups(self):
+        return self._query_objects(
+            'PRODUCT_GROUPS_GET',
+            0, self.system_identifier)
+
     def get_customer_agreements(self, customer_id=NULL, product_id=NULL,
                                 valid_on_date=NULL, inactive=NULL,
                                 only_changed=NULL):
