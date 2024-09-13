@@ -163,6 +163,7 @@ class Collmex:
         for item in items:
             item['Rechnungsnummer'] = id
             self.create(item)
+        return id
 
     def create_product(self, product):
         # This is an deprecated API. Use ``create`` instead.
