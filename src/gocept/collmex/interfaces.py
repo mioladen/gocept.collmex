@@ -80,3 +80,6 @@ class IActivity(IModel):
 
 class IProject(IModel):
     """A project (CMXPRJ)."""
+
+class IEmployee(IModel):
+    """A employee (EMPLOYEE)."""
