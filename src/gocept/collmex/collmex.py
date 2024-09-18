@@ -206,6 +206,13 @@ class Collmex:
             0,  # 1 -- only changed since last call
             self.system_identifier)
 
+    def get_employees(self, employee_id=NULL, text=NULL):
+        return self._query_objects(
+            'EMPLOYEE_GET',
+            employee_id,
+            self.company_id,
+            text)
+
     def get_products(self, product_id=NULL,
                      product_group=NULL, price_group=NULL):
         return self._query_objects(

@@ -438,3 +438,34 @@ class Project(Model):
         'Mengeneinheit',
         'Inaktiv',
     )
+
+@zope.interface.implementer(gocept.collmex.interfaces.IEmployee)
+class Employee(Model):
+
+    satzart = 'EMPLOYEE'
+    fields = (
+        'Satzart',
+        'Mitarbeiter Nr',
+        'Firma Nr',
+        'Anrede',
+        'Vorname',
+        'Name',
+        'Straße',
+        'PLZ',
+        'Ort',
+        'Land',
+        'Telefon',
+        'Telefon 2',
+        'E-Mail',
+        'Bemerkung',
+        'Iban',
+        'Bic',
+        'Bankname',
+        'Kontonummer',
+        'Blz',
+        'Kontoinhaber',
+        'Art',
+        'Eingetreten am',
+        'Ausgeschieden am',
+        'Lieferant für Gutschrift',
+    )
