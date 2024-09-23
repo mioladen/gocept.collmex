@@ -248,6 +248,17 @@ class Collmex:
             self.company_id,
             customer_id)
 
+    def get_vendors(self, vendor_id=NULL, customer_id=NULL, text=NULL, due=NULL, zip_country=NULL, only_changed=NULL):
+        return self._query_objects(
+            'VENDOR_GET',
+            vendor_id,
+            customer_id,
+            text,
+            due,
+            zip_country,
+            only_changed,
+            self.company_id)
+
     def get_activities(self, project_id=NULL,
                        employee_id=NULL,
                        start_date=NULL, end_date=NULL,
