@@ -83,3 +83,6 @@ class IProject(IModel):
 
 class IEmployee(IModel):
     """A employee (EMPLOYEE)."""
+
+class IVendor(IModel):
+    """A vendor (CMXLIF)."""
