@@ -343,7 +343,9 @@ class Collmex:
         data = (data.decode('UTF-8')
                 if isinstance(data, bytes)
                 else data)
-        data = 'LOGIN;{};{}\n'.format(self.username, self.password) + data
+        login = io.StringIO()
+        csv.writer(login, dialect=CollmexDialect).writerow(['LOGIN', self.username, self.password])
+        data = login.getvalue() + data
         log.debug(data.replace(self.password, '<PASSWORD>'))
         print('###', data)
         content_type, body = gocept.collmex.utils.encode_multipart_formdata(
